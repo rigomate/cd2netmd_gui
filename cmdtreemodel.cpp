@@ -164,7 +164,10 @@ void CMDTreeModel::setupModelData()
                 pGroup = new CTreeItem(ItemRole::GROUP, trackGroup, pDisc);
             }
             pTrack = new CTreeItem(ItemRole::TRACK, track, pGroup);
-            pGroup->appendChild(pTrack);
+            if (pGroup != nullptr)
+            {
+                pGroup->appendChild(pTrack);
+            }
         }
     }
 
