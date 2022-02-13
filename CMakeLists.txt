@@ -10,7 +10,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 if(RUN_CLANG_TIDY)
-    set(CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=clang-analyzer*")
+    set(CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=clang-analyzer*;-export-fixes=clang-fixes.yaml")
 endif()
 
 if(CMAKE_VERSION VERSION_LESS "3.7.0")
